@@ -1,0 +1,85 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core"
+	controllerName="ns.ProductUI.controller.View2" displayBlock="true">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page2" title="Detailed View" showNavButton="true" navButtonPress="onNavBack" class="sapUiResponsivePadding">
+					<content>
+						<VBox class="sapUiSmallMargin">
+							
+							   
+							
+							<f:Form id="FormDisplay354" editable="false">
+							
+								<f:title>
+									<core:Title text="{/Name}"/>
+								</f:title>
+								
+								<f:layout>
+									<f:ResponsiveGridLayout labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4"
+										emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false"/>
+								</f:layout>
+								<f:formContainers>
+									<f:FormContainer>
+										<f:formElements>
+											<f:FormElement label="ProductId">
+												<f:fields>
+													<Text text="{/ProductId}"/>
+												</f:fields>
+											</f:FormElement>
+											<f:FormElement label="Category">
+												<f:fields>
+													<Text text="{/Category}"/>
+												</f:fields>
+											</f:FormElement>
+											<f:FormElement label="MainCategory">
+												<f:fields>
+													<Text text="{/MainCategory}"/>
+												</f:fields>
+											</f:FormElement>
+											<f:FormElement label="SupplierName">
+												<f:fields>
+													<Text text="{/SupplierName}"/>
+												</f:fields>
+											</f:FormElement>
+											<f:FormElement label="Weight">
+												<f:fields>
+													<Text text="{/Weight} {/WeightUnit}"/>
+												</f:fields>
+											</f:FormElement>
+											<f:FormElement label="Price">
+												<f:fields>
+													<Text text="{/Price} {/Currency}"/>
+												</f:fields>
+											</f:FormElement>
+											<f:FormElement label="Dimensions">
+												<f:fields>
+													<Text text="{/DimensionHeight}{/DimensionUnit} * {/DimensionWidth}{/DimensionUnit} * {/DimensionDepth}{/DimensionUnit}"/>
+												</f:fields>
+											</f:FormElement>
+											<f:FormElement label="Description">
+												<f:fields>
+													<Text text="{/Description}"/>
+												</f:fields>
+											</f:FormElement>
+										</f:formElements>
+									</f:FormContainer>
+								</f:formContainers>
+							</f:Form>
+							<Bar>
+							    <contentRight>
+							       <HBox >
+												<Button type="Accept" icon="sap-icon://edit" text="Edit" tooltip="edit record" press="onEdit" class="sapUiSmallMarginEnd">
+												</Button>
+												<Button type="Reject" icon="sap-icon://delete" text="Delete" tooltip="delete record" press="onDelete($event,${/ProductId})" >
+												</Button>
+							    	</HBox>
+							    </contentRight>
+							</Bar>
+						</VBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

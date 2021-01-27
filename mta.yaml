@@ -1,0 +1,55 @@
+ID: ProductProject
+_schema-version: '2.1'
+version: 0.0.1
+modules:
+  - name: ProductsDB
+    type: hdb
+    path: ProductsDB
+    requires:
+      - name: hdi_ProductsDB
+  - name: ProductXsjs
+    type: nodejs
+    path: ProductXsjs
+    provides:
+      - name: ProductXsjs_api
+        properties:
+          url: '${default-url}'
+    requires:
+      - name: hdi_ProductsDB
+      - name: ProductsDB
+
+  - name: ProductUI
+    type: html5
+    path: ProductUI
+    parameters:
+       disk-quota: 512M
+       memory: 256M
+    build-parameters:
+       builder: grunt
+    requires:
+     - name: uaa_ProductProject
+     - name: dest_ProductProject
+
+resources:
+  - name: hdi_ProductsDB
+    parameters:
+      config:
+        schema: ProductsSchema
+    properties:
+      hdi-container-name: '${service-name}'
+    type: com.sap.xs.hdi-container
+
+  - name: uaa_ProductProject
+    parameters:
+       path: ./xs-security.json
+       service-plan: application
+       service: xsuaa
+    type: org.cloudfoundry.managed-service
+
+
+  - name: dest_ProductProject
+    parameters:
+       service-plan: lite
+       service: destination
+    type: org.cloudfoundry.managed-service
+

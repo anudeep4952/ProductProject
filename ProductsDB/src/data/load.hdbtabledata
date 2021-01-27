@@ -1,0 +1,51 @@
+{
+	"format_version": 1,
+	"imports": [{
+		"target_table": "Products",
+		"source_data": {
+			"data_type": "CSV",
+			"file_name": "productsData.csv",
+			"has_header": false,
+			"dialect": "HANA",
+			"type_config": {
+				"delimiter": ","
+			}
+		},
+		"import_settings": {
+         	"include_filter" : [ ],		
+			"import_columns": [
+			"ProductId",
+			"Category",
+			"MainCategory",
+			"SupplierName",
+			"Weight",
+			"WeightUnit",
+			"Description",
+			"Name",
+			"Price",
+			"Currency",
+			"DimensionWidth",
+			"DimensionDepth",
+			"DimensionHeight",
+			"DimensionUnit"
+			]
+		},
+		"column_mappings": {
+			"ProductId":1,
+			"Category":2,
+			"MainCategory":3,
+			"SupplierName":4,
+			"Weight":5,
+			"WeightUnit":6,
+			"Description":7,
+			"Name":8,
+			"Price":9,
+			"Currency":10,
+			"DimensionWidth":11,
+			"DimensionDepth":12,
+			"DimensionHeight":13,
+			"DimensionUnit":14
+		}
+	}
+	]
+}

@@ -1,0 +1,17 @@
+COLUMN TABLE "Products"(
+	"ProductId" VARCHAR(10) COMMENT 'Product ID',
+	"Category" VARCHAR(10) COMMENT 'Catrgory',
+	"MainCategory" VARCHAR(30) COMMENT 'Main Category',
+	"SupplierName" VARCHAR(30) COMMENT 'Supplier Name',
+	"Weight" DECIMAL(15,2) COMMENT 'Weight',
+	"WeightUnit" VARCHAR(4) COMMENT 'Weight Unit',
+	"Description" VARCHAR(5000) COMMENT 'Description',
+	"Name" VARCHAR(100) COMMENT 'Product Name',
+	"Price" DECIMAL(15,2) COMMENT 'Price',
+	"Currency" VARCHAR(5) COMMENT 'Currency',
+	"DimensionWidth" DECIMAL(15,2) COMMENT 'Width',
+	"DimensionDepth" DECIMAL(15,2) COMMENT 'Depth',
+	"DimensionHeight" DECIMAL(15,2) COMMENT 'Height',
+	"DimensionUnit" VARCHAR(4) COMMENT 'Dimension Unit',
+	PRIMARY KEY ("ProductId")
+)

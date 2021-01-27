@@ -1,0 +1,14 @@
+{
+  "welcomeFile": "/ProductUI/index.html",
+  "authenticationMethod": "route",
+  "logout": {
+    "logoutEndpoint": "/do/logout"
+  },
+  "routes": [
+    {
+      "source": "^/ProductUI/(.*)$",
+      "target": "$1",
+      "localDir": "webapp"
+    }
+  ]
+}

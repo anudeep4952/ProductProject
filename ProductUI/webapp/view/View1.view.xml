@@ -1,0 +1,53 @@
+<mvc:View controllerName="ns.ProductUI.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="CRUD OPERATION PROJECT" class="sapUiResponsivePadding">
+					<content>
+					   <Toolbar>
+							<Title level="H3" text="Demo Products" />
+							<ToolbarSpacer />
+							
+							<Button text="Refresh" icon="sap-icon://refresh" press="handleRefreshButton" />
+							
+							<Button text="Add Product" icon="sap-icon://add" press="handleAddButton" />
+							
+						</Toolbar>
+						
+						<Table id="ProductTable" visible="false" 
+						  items="{path: 'dataModel>/',sorter:{path:'ProductId'}}"
+						  growing="true"
+						  growingThreshold="14"
+                          growingScrollToLoad="false">
+									<columns>
+									<Column>
+									<Text text="ProductId"/>
+									</Column>
+									<Column>
+									<Text text="Name"/>
+									</Column>
+									<Column>
+									<Text text="Price"/>
+									</Column>
+									</columns>
+									<items>
+									<ColumnListItem type="Navigation" press="onPress1">
+									<cells>
+									<Text text="{dataModel>ProductId}"/>
+									</cells>
+									<cells>
+									<Text text="{dataModel>Name}"/>
+									</cells>
+									<cells>
+									<Text text="{dataModel>Price} {dataModel>CurrencyCode}"/>
+									</cells>
+									</ColumnListItem>
+									</items>
+						</Table>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
+
