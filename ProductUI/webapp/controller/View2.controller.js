@@ -33,10 +33,11 @@ sap.ui.define([
             },
 
             _onRouteMatched: async function(oEvent) {
-            	    
+            	   
             	    var sObject = oEvent.getParameter("arguments").object;
                     var pid = JSON.parse(sObject) ;
                     this.setData(pid.ProductId);
+                   
             },
             
             deleteProduct:async function(id){

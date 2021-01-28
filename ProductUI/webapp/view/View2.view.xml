@@ -5,7 +5,7 @@
 			<pages>
 				<Page id="page2" title="Detailed View" showNavButton="true" navButtonPress="onNavBack" class="sapUiResponsivePadding">
 					<content>
-						<VBox class="sapUiSmallMargin">
+						<VBox  class="sapUiSmallMargin">
 							
 							   
 							

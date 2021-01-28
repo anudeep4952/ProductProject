@@ -18,37 +18,37 @@
 			columnsM="1">
 			<f:content>
 				 <Label text="Product ID" />
-				  <Input value="{dataModel>/ProductId}" />
+				  <Input value="{dataModel>/ProductId}"  maxLength="10" />
 				  <Label text="Name" />
-				  <Input value="{dataModel>/Name}" />
+				  <Input value="{dataModel>/Name}" maxLength="10" />
 				  <Label text="Price" />
 				  <Input value="{dataModel>/Price}" />
 				  <Label text="Currency Code" />
 				  <Input value="{dataModel>/Currency}" editable="false"/>
 				  
 				  <Label text="Category" />
-				  <Input value="{dataModel>/Category}"/>
+				  <Input value="{dataModel>/Category}" maxLength="10"/>
 				  
 				  <Label text="MainCategory" />
-				  <Input value="{dataModel>/MainCategory}"/>
+				  <Input value="{dataModel>/MainCategory}" maxLength="10"/>
 				  
 				   <Label text="SupplierName" />
-				  <Input value="{dataModel>/SupplierName}"/>
+				  <Input value="{dataModel>/SupplierName}" maxLength="10"/>
 				  
 				   <Label text="Weight" />
-				  <Input value="{dataModel>/Weight}"/>
+				  <Input value="{dataModel>/Weight}" />
 				  
 				   <Label text="Weight Unit" />
 				  <Input value="{dataModel>/WeightUnit}" editable="false"/>
 				  
 				   <Label text="Dimension Width" />
-				  <Input value="{dataModel>/DimensionWidth}"/>
+				   <Input value="{dataModel>/DimensionWidth}"/>
 				  
 				   <Label text="Dimension Depth" />
-				  <Input value="{dataModel>/DimensionDepth}"/>
+				  <Input value="{dataModel>/DimensionDepth}" />
 				  
 				   <Label text="Dimension Height" />
-				  <Input value="{dataModel>/DimensionHeight}"/>
+				  <Input value="{dataModel>/DimensionHeight}" />
 				  
 				   <Label text="Dimension Unit" />
 				  <Input value="{dataModel>/DimensionUnit}" editable="false"/>
