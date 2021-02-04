@@ -12,6 +12,7 @@ modules:
     requires:
       - name: DemoHanaDB
       - name: hdi_DemoHanaDB
+      - name: uaa_ProductProject
   - name: ProductUI
     type: html5
     path: ProductUI
@@ -23,6 +24,7 @@ modules:
     requires:
       - name: uaa_ProductProject
       - name: dest_ProductProject
+      - name: uaa_ProductProject
   - name: DemoHanaDB
     type: hdb
     path: DemoHanaDB

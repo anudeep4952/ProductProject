@@ -19,7 +19,7 @@ var content = $.request.body.asString();
 content = JSON.parse(content);
 
 
-let query=`UPDATE "PRODUCTSSCHEMA_1"."Products"
+let query=`UPDATE "DEMOHANADB_1"."Products"
  SET "Category"='${content["Category"]}',
 	"MainCategory"='${content["MainCategory"]}',
 	"SupplierName"='${content["SupplierName"]}',

@@ -4,7 +4,7 @@
 
 let conn = $.hdb.getConnection();
 let query =
-	`SELECT * FROM "PRODUCTSSCHEMA_1"."Products" `;
+	`SELECT * FROM "DEMOHANADB_1"."Products" `;
 let rs = conn.executeQuery(query);
 
 $.response.contentType = "application/json;charset=UTF-8";	

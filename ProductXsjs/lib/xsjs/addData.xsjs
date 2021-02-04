@@ -13,7 +13,7 @@ content = JSON.parse(content);
 
 
 let query =
-	`INSERT INTO "PRODUCTSSCHEMA_1"."Products" VALUES(
+	`INSERT INTO "DEMOHANADB_1"."Products" VALUES(
 	'${content["ProductId"]}',
 	'${content["Category"]}',
 	'${content["MainCategory"]}',

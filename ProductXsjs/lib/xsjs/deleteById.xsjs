@@ -5,7 +5,7 @@ let conn= $.hdb.getConnection();
 
 const id = $.request.parameters.get('id');
 
-let query=`DELETE FROM "PRODUCTSSCHEMA_1"."Products" where ("ProductId"='${id}')`;
+let query=`DELETE FROM "DEMOHANADB_1"."Products" where ("ProductId"='${id}')`;
 
 let rs = conn.executeUpdate(query);
 
