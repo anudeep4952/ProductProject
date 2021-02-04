@@ -122,8 +122,8 @@ sap.ui.define([
 	            var oDialog = oEvent.getSource().getParent();
                 oDialog.close();
 	        },
-	
-
+	        
+	        
             onNavBack: function () {
 			var oHistory = History.getInstance();
 			var sPreviousHash = oHistory.getPreviousHash();
