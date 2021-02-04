@@ -2,11 +2,6 @@ ID: ProductProject
 _schema-version: '2.1'
 version: 0.0.1
 modules:
-  - name: ProductsDB
-    type: hdb
-    path: ProductsDB
-    requires:
-      - name: hdi_ProductsDB
   - name: ProductXsjs
     type: nodejs
     path: ProductXsjs
@@ -15,21 +10,24 @@ modules:
         properties:
           url: '${default-url}'
     requires:
-      - name: hdi_ProductsDB
-      - name: ProductsDB
-
+      - name: DemoHanaDB
+      - name: hdi_DemoHanaDB
   - name: ProductUI
     type: html5
     path: ProductUI
     parameters:
-       disk-quota: 512M
-       memory: 256M
+      disk-quota: 512M
+      memory: 256M
     build-parameters:
-       builder: grunt
+      builder: grunt
     requires:
-     - name: uaa_ProductProject
-     - name: dest_ProductProject
-
+      - name: uaa_ProductProject
+      - name: dest_ProductProject
+  - name: DemoHanaDB
+    type: hdb
+    path: DemoHanaDB
+    requires:
+      - name: hdi_DemoHanaDB
 resources:
   - name: hdi_ProductsDB
     parameters:
@@ -38,18 +36,21 @@ resources:
     properties:
       hdi-container-name: '${service-name}'
     type: com.sap.xs.hdi-container
-
   - name: uaa_ProductProject
     parameters:
-       path: ./xs-security.json
-       service-plan: application
-       service: xsuaa
+      path: ./xs-security.json
+      service-plan: application
+      service: xsuaa
     type: org.cloudfoundry.managed-service
-
-
   - name: dest_ProductProject
     parameters:
-       service-plan: lite
-       service: destination
+      service-plan: lite
+      service: destination
     type: org.cloudfoundry.managed-service
-
+  - name: hdi_DemoHanaDB
+    parameters:
+      config:
+        schema: DemoHanaDb
+    properties:
+      hdi-container-name_2: '${service-name}'
+    type: com.sap.xs.hdi-container
